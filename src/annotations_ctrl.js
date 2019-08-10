@@ -61,7 +61,7 @@ export class AnnotationsCtrl extends PanelCtrl {
         // tags
         var tags = this.annotation.tags.replace(/,/g, "\\,");
 
-        return "" + this.editor.measurement + "," + this.editor.tagsColumn + "=" + tags + " " + this.editor.titleColumn + "=\"" + this.annotation.title + "\"," + this.editor.textColumn + "=\"" + this.annotation.text + "\" " + timestamp;
+        return "" + this.editor.measurement + "," + this.editor.tagsColumn + "_tag=" + tags + " " + this.editor.titleColumn + "=\"" + this.annotation.title + "\","+ this.editor.tagsColumn + "=" + tags + "\"," + this.editor.textColumn + "=\"" + this.annotation.text + "\" " + timestamp;
     }
 
     writeData(query) {
